@@ -25,6 +25,26 @@ try:
     password.send_keys(password_value)
     time.sleep(2)
     password.send_keys(Keys.RETURN)
+    time.sleep(3)
+
+    #Selecting result button
+    resultBtn = driver.find_element(By.XPATH,'//*[@id="7"]')
+    resultBtn.click()
+    time.sleep(2)
+
+    #Selecting the semester dropdown
+    selectSem = driver.find_element(By.XPATH,'//*[@id="semesterGradeCardListingSearchForm_semesterId"]')
+    selectSem.click()
+    time.sleep(2)
+
+    #Selecting the second semester
+    secondSem = driver.find_element(By.XPATH, '//*[@id="semesterGradeCardListingSearchForm_semesterId"]/option[3]')
+    secondSem.click()
+    time.sleep(2)
+
+    #Selecting the search button
+    searchBtn = driver.find_element(By.XPATH,'//*[@id="semesterGradeCardListingSearchForm_search"]')
+    searchBtn.click()
     time.sleep(5)
 
 finally:
