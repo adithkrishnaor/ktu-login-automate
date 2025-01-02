@@ -16,6 +16,7 @@ driver = webdriver.Chrome()
 
 try:
     driver.get("https://app.ktu.edu.in/login.htm")
+    driver.maximize_window()
     time.sleep(2)
     username = driver.find_element(By.ID, "login-username")
     password = driver.find_element(By.ID,"login-password")
@@ -24,7 +25,7 @@ try:
     password.send_keys(password_value)
     time.sleep(2)
     password.send_keys(Keys.RETURN)
-    time.sleep(2)
+    time.sleep(5)
 
 finally:
     driver.quit()
