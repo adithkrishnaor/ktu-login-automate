@@ -37,8 +37,8 @@ try:
     selectSem.click()
     time.sleep(2)
 
-    #Selecting the second semester
-    secondSem = driver.find_element(By.XPATH, '//*[@id="semesterGradeCardListingSearchForm_semesterId"]/option[3]')
+    #Selecting the first semester
+    secondSem = driver.find_element(By.XPATH, '//*[@id="semesterGradeCardListingSearchForm_semesterId"]/option[2]')
     secondSem.click()
     time.sleep(2)
 
@@ -46,6 +46,8 @@ try:
     searchBtn = driver.find_element(By.XPATH,'//*[@id="semesterGradeCardListingSearchForm_search"]')
     searchBtn.click()
     time.sleep(5)
+    #Taking the screenshot
+    driver.save_screenshot("result.png")
 
 finally:
     driver.quit()
