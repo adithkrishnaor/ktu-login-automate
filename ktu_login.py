@@ -38,7 +38,7 @@ try:
     time.sleep(2)
 
     #Selecting the first semester
-    secondSem = driver.find_element(By.XPATH, '//*[@id="semesterGradeCardListingSearchForm_semesterId"]/option[2]')
+    secondSem = driver.find_element(By.XPATH, '//*[@id="semesterGradeCardListingSearchForm_semesterId"]/option[3]')
     secondSem.click()
     time.sleep(2)
 
